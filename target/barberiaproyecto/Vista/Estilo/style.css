@@ -1,0 +1,414 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    display: none;
+}
+
+.body-cliente {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+.header-cliente {
+    background-color: #1a1a1a;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-radius: 0; /* Remueve los bordes redondeados */
+}
+
+.navegacion-cliente {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-cliente {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu-cliente {
+    display: flex;
+    list-style: none;
+}
+
+.menu-cliente li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+.menu-cliente li a:hover {
+    color: #c4a777;
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg1.wsimg.com%2Fisteam%2Fip%2F62f0d26d-f569-402c-a8da-b7a6eaeab9f0%2Fshutterstock_1880376892.jpg&f=1&nofb=1&ipt=39aa3e0c39b286a81b80f4e6cc104335fda354f5ecf7c649c4edb824798c68bd&ipo=images') center/cover;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 1rem;
+    width: 100vw; /* Asegura que abarque todo el ancho */
+    border-radius: 0; 
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn-reservar, .btn-service {
+    background-color: #c4a777;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+.btn-service {
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+}
+
+.btn-reservar:hover, .btn-service:hover {
+    background-color: #a88d5f;
+}
+
+.services, .barbers, .booking, .contact {
+    padding: 5rem 0;
+    width: 100vw; /* Asegura que abarque todo el ancho */
+}
+
+.services, .contact {
+    background-color: #f5f5f5;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #1a1a1a;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    max-width: 1200px; /* Limita el ancho de las tarjetas de servicios */
+    margin: 0 auto;
+}
+
+.barbers-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    max-width: 1200px; /* Limita el ancho de las tarjetas de barberos */
+    margin: 0 auto;
+}
+
+.service-card, .barber-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1 1 300px; /* Tamaño adaptable según el espacio disponible */
+    max-width: 300px;
+}
+
+.service-card img, .barber-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.service-info {
+    padding: 1.5rem;
+}
+
+.service-info h3 {
+    margin-bottom: 0.5rem;
+}
+
+.service-info .price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #c4a777;
+    margin: 1rem 0;
+}
+
+.barber-card h3 {
+    margin: 1rem 0 0.5rem;
+}
+
+.barber-card .experience {
+    color: #666;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+.booking-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-hint {
+    display: block;
+    color: #666;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%; /* Asegura que abarque todo el ancho */
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.contact-info, .hours {
+    flex: 1;
+    max-width: 300px;
+}
+
+.contact-info p {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.hours h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.hours p {
+    margin: 0.5rem 0;
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    width: 100vw; /* Asegura que abarque todo el ancho */
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .contact-info, .hours {
+        max-width: 100%;
+    }
+}
+
+.dorado {
+    color: #a88d5f;
+}
+
+/* ===================================================================Estilos para jefe.jsp======================================================================= */
+/* General estilos */
+.Jefe {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: url(https://cdn.pixabay.com/photo/2024/09/14/16/19/ai-generated-9047404_1280.png);
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen de fondo para que no se desplace al hacer scroll */
+    background-position: center; /* Centra la imagen */
+}
+
+/* Header */
+.headerJefe {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    z-index: 1;
+    position: sticky;
+}
+
+.headerJefe p {
+    font-weight: bold;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.headerJefe h1 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Section estilos */
+section {
+    width: 50%;
+    margin: 1.5rem auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(253, 253, 253, 0.1);
+    border-radius: 50px;
+}
+
+section h2 {
+    text-align: center;
+    color: #0c0a0a;
+    margin-bottom: 1rem;
+}
+
+section h3 {
+    color: #000000;
+    margin-bottom: 0.4rem;
+}
+
+/* Form estilos */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"],
+form input[type="time"],
+form select {
+    padding: 0.6rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+form button {
+    padding: 0.6rem;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Button for Viewing Data */
+form.view-button {
+    text-align: center;
+}
+
+form.view-button button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+}
+
+form.view-button button:hover {
+    background-color: #555;
+}
+
+/* Error and Success Messages */
+.message {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+.message.success {
+    color: #4CAF50;
+}
+
+.message.error {
+    color: #e74c3c;
+}
